@@ -54,3 +54,7 @@ Repository used in the app. Repository is a layer to organize data in db. For ex
 ### repository_mock
 
 Contain mocks of repository. Can be generated automatically using tool, or build manually.
+
+### platform
+
+Contain driver for storage, like mysql, postgresql, mongo, etc.
