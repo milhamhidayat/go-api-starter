@@ -1,60 +1,27 @@
-# internal/app
+# internal
 
-Private application and library code. Consist of:
+internal is private application and library code. This is the code you don't want others importing in their applications or libraries.
 
-### delivery
+# app
 
-Any protocol interface used in the app (ex: grpc, graphql, http). If service and repository have different interface method, put service interface in this layer.
+main functionality / entry point
 
-```
-- delivery
-    - http
-        - user
-            - user.go
-            - user_test.go
-        - article
-            - article.go
-            - article_test.go
-    - grpc
-    - graphql
-```
+# pkg
 
-### service
+private package used only for internal usage
 
-Service used in the app. Service is a layer handle business logic. If service and repository interface is same, then just put interface in the service. Otherwise, put repository interface in this layer. For example, the structure is:
+# profiler
 
-```
-- service
-    - user
-        - user.go
-        - user_test.go
-    - article
-        - article.go
-        - article_test.go
-```
+profiling / debug the project
 
-### service_mock
+# server
 
-Contain mocks of service. Can be generated automatically using tool, or build manually.
+server delivery, service, and repository
 
-### repository
+# platform
 
-Repository used in the app. Repository is a layer to organize data in db. For example, the structure is:
+contain connection object
 
-```
-- repository
-    - user
-        - user.go
-        - user_test.go
-    - article
-        - article.go
-        - article_test.go
-```
+# test
 
-### repository_mock
-
-Contain mocks of repository. Can be generated automatically using tool, or build manually.
-
-### platform
-
-Contain driver for storage, like mysql, postgresql, mongo, etc.
+contain test utility and test data
