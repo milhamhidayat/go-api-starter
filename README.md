@@ -1,5 +1,5 @@
 # go-api-starter
-Go API starter to create API
+Go API starter to create API. It's suitable for complex project. NOT SUITABLE for simple project.
 
 - Directory list
 
